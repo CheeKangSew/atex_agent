@@ -34,7 +34,7 @@ def login():
         if submitted:
             if USER_CREDENTIALS.get(username) == password:
                 st.session_state["authenticated"] = True
-                st.experimental_rerun()  # 🔄 Force app rerun to show chat
+                st.rerun()  # 🔄 Force app rerun to show chat
             else:
                 st.error("❌ Invalid username or password")
 
